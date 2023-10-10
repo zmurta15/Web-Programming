@@ -1,0 +1,52 @@
+#gridContainer {
+    display: grid;
+    grid-template-rows:[header] auto [content] auto [footer] auto;
+    grid-template-columns: [nav] 150px [main] 1fr [log] 200px;
+    grid-template-areas:
+    "header header header"
+    "nav main log"
+    "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    min-height: 50px;
+    background-color: #003cff;
+}
+
+nav {
+    grid-area: nav;
+}
+
+.logClass {
+    grid-area: log;
+    margin-top: 10px;
+}
+
+main {
+    grid-area: main;
+}
+
+nav, main {
+    margin-top: 10px;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.ajax {
+    color: rgb(4, 104, 104);
+    font-weight: bold;
+    text-align: center;
+}
+
+main .name {
+    font-weight: bold;
+}
+
+#offers {
+    color: grey;
+    text-align: center;
+}

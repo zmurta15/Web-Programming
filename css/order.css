@@ -1,0 +1,38 @@
+body {
+    display: grid;
+    grid-template-rows:[header] auto [content] auto [footer] auto;
+    grid-template-columns: [nav] 150px [form] 1fr [log] 200px;
+    grid-template-areas:
+    "header header header"
+    "nav form log"
+    "footer footer footer";
+}
+
+h1 {
+    grid-area: header;
+    min-height: 50px;
+    background-color: #003cff;
+    margin: 0;
+}
+
+nav {
+    grid-area: nav;
+}
+
+.logClass {
+    grid-area: log;
+    margin-top: 10px;
+}
+
+#orderForm {
+    grid-area: form;
+}
+
+nav, #orderForm {
+    margin-top: 10px;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
